@@ -1,6 +1,6 @@
 {:paths ["bb"]
  :deps {org.babashka/http-server {:mvn/version "0.1.11"}
-        org.babashka/cli {:mvn/version "0.7.51"}}
+        org.babashka/cli {:mvn/version "0.7.53"}}
  :pods {clj-kondo/clj-kondo {:version "2023.01.20"}}
  :tasks
  {:requires ([babashka.cli :as cli]

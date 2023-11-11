@@ -1,22 +1,21 @@
 {:paths ["src" "resources"]
 
  :deps
- {markdown-clj/markdown-clj {:mvn/version "1.11.4"
+ {markdown-clj/markdown-clj {:mvn/version "1.11.7"
                              exclusions [org.yaml/snakeyaml]}
   metosin/reitit {:mvn/version "0.6.0"}
-  org.babashka/sci {:mvn/version "0.7.39"}
+  org.babashka/sci {:mvn/version "0.8.40"}
   reagent/reagent {:mvn/version "1.2.0"}
-  thheller/shadow-cljs {:mvn/version "2.23.3"
-                        :exclusions [commons-fileupload/commons-fileupload
+  thheller/shadow-cljs {:mvn/version "2.26.0"
+                        :exclusions [com.fasterxml.jackson.core/jackson-databind
+                                     com.google.guava/guava
+                                     commons-fileupload/commons-fileupload
                                      io.undertow/undertow-core
                                      org.jboss.xnio/xnio-api
                                      org.jboss.xnio/xnio-nio]}
-  commons-fileupload/commons-fileupload #:mvn{:version "1.5"}
-  io.undertow/undertow-core #:mvn{:version "2.3.7.Final"}
-  org.jboss.xnio/xnio-api #:mvn{:version "3.8.9.Final"}
-  org.jboss.xnio/xnio-nio #:mvn{:version "3.8.9.Final"}
-  org.yaml/snakeyaml {:mvn/version "2.0"}}
+  com.fasterxml.jackson.core/jackson-databind #:mvn{:version "2.16.0-rc1"}
+  org.yaml/snakeyaml {:mvn/version "2.2"}}
 
  :aliases
  {:dev
-  {:extra-deps {cider/cider-nrepl {:mvn/version "0.30.0"}}}}}
+  {:extra-deps {cider/cider-nrepl {:mvn/version "0.43.3"}}}}}
