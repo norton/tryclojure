@@ -66,6 +66,7 @@
    :doc "Runs build for clojurescript + tailwind."
    :task (do
            (shell "bash -c 'source .vnodeenv/bin/activate && npx browserslist@latest --update-db'")
+           (shell "bash -c 'source .vnodeenv/bin/activate && npm audit fix'")
            (shell "bash -c 'source .vnodeenv/bin/activate && npm run build'"))}
 
   watch
