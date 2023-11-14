@@ -1,7 +1,7 @@
 (ns app.tutorial
   (:require
    [clojure.string :as string]
-   [sci.impl.vars :refer [IVar]]))
+   [sci.lang :refer [Var]]))
 
 (def tutorial
   "Collection of map steps."
@@ -103,7 +103,7 @@
   **Global** variables are defined using `def`. Their value could be anything.
 
   Create a global variable called `foo` with a value. E.g. `(def foo \"bar\")`"
-    :test #(and (instance? IVar %) (= "foo" (-> (.-meta %) :name str)))}
+    :test #(and (instance? Var %) (= "foo" (-> (.-meta %) :name str)))}
    ;; Let
    {:title "Let it be local"
     :content
